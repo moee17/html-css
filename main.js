@@ -47,8 +47,10 @@ let likeBtn = document.querySelectorAll(".like-btn");
 
 for (i = 0; i < likeBtn.length; i++) {
 	let crrLikebtn = likeBtn[i].children[0];
+	let baseCol = crrLikebtn.style.color;
+	console.log(baseCol);
 	crrLikebtn.addEventListener("click", () => {
-		if ((crrLikebtn.style.color = "#000")) {
+		if (baseCol == "rgb(0, 0, 0)") {
 			crrLikebtn.style.color = "#2078F4";
 		}
 	});
